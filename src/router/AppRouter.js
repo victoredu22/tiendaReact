@@ -5,6 +5,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+import { ComprasScreen } from '../components/layout/ComprasScreen';
 import { LayoutScreen } from '../components/layout/LayoutScreen';
 
 
@@ -13,7 +14,9 @@ export const AppRouter = () => {
     <Router>
         <div>
           <Switch>
-            <Route exact path="/layout" component={LayoutScreen} />
+            <Route exact path="/" component={LayoutScreen} />
+            <Route exact path="/compras" component={ComprasScreen} />
+            <Redirect to="/"/> 
           </Switch>
         </div>
     </Router>
