@@ -1,6 +1,14 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 
 export const NavBar = () => {
+  const {producto} = useSelector((state) => state.producto);
+  const {carrito} = useSelector((state)=>state.carrito);
+
+  
+  console.log(carrito);
+
+
   return (
     <div className="row g-0 h-100">
     <nav className="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100" style={{zIndex: '100'}}>
@@ -19,11 +27,10 @@ export const NavBar = () => {
           </li>
           <li className="nav-item align-self-center d-flex">
             <a className="nav-link text-dark" href="#/">
-              <i className="fas fa-shopping-bag text-primary"></i>
-              Mis ordenes</a>
+              <i className="fas fa-shopping-bag text-primary"></i> Mi carrito <span className="spanStock" >({carrito.length})</span></a>
           </li>
           <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+            <a className="nav-link dropdown-toggle" href="!#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
               <i className="fas fa-user text-primary"></i> Inicia Sesion
             </a>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
