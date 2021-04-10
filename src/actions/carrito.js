@@ -1,6 +1,6 @@
 import { types } from "../types/types";
 
-export const loadOrden = (carrito)=>({
+export const loadCarrito = (carrito)=>({
   type:types.loadCarrito,
   payload:carrito
 })

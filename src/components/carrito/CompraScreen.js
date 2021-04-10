@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ContenidoScreen = () => {
+export const CompraScreen = () => {
   return (
     <section className="container">
       <div className="container divCompra">

@@ -1,14 +1,43 @@
-import React from 'react'
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { loadCarrito } from '../../actions/carrito';
+
 
 export const NavBar = () => {
-  const {producto} = useSelector((state) => state.producto);
+  
+  const dispatch = useDispatch();
   const {carrito} = useSelector((state)=>state.carrito);
 
+  const x = localStorage.getItem('carrito');
+  const [carroStorage, setCarroStorage] = useState(localStorage.getItem('carrito'))
+
+
+  useEffect(() => {
+    setCarroStorage(carrito)
+  }, [carrito])
+
+
+
+
+
+/*   useEffect(() => {
+    
+    if(carrito.length != 0){
+				localStorage.setItem('carrito', JSON.stringify(carrito));
+		}else{
+			console.log('no');
+		}
+    //localStorage.setItem('carrito', JSON.stringify(carrito));
   
-  console.log(carrito);
+  }, [])
+   */
+
+  
 
 
+
+
+  
   return (
     <div className="row g-0 h-100">
     <nav className="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100" style={{zIndex: '100'}}>
@@ -26,7 +55,7 @@ export const NavBar = () => {
             <input type="text" className="form-control searchProducto" placeholder="Buscar producto"  />
           </li>
           <li className="nav-item align-self-center d-flex">
-            <a className="nav-link text-dark" href="#/">
+            <a className="nav-link text-dark"  href={'/compras'} >
               <i className="fas fa-shopping-bag text-primary"></i> Mi carrito <span className="spanStock" >({carrito.length})</span></a>
           </li>
           <li className="nav-item dropdown">

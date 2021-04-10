@@ -1,5 +1,5 @@
 import React from 'react'
-import { ContenidoScreen } from '../carrito/ContenidoScreen'
+import { ContenidoScreen } from '../carrito/CompraScreen'
 import { NavBar } from '../index/NavBar'
 
 export const ComprasScreen = () => {

@@ -122,4 +122,7 @@ section{
   opacity:0.6;
   font-size: 0.9em;
 }
+.seleccionDiv{
+  cursor: pointer
+}
 

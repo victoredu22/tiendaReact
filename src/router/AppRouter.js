@@ -5,20 +5,27 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import { ComprasScreen } from '../components/layout/ComprasScreen';
+import { NavBar } from '../components/index/NavBar';
+import { PieScreen } from '../components/index/PieScreen';
+import 'animate.css'
+
 import { LayoutScreen } from '../components/layout/LayoutScreen';
 
 
 export const AppRouter = () => {
   return (
     <Router>
+       <NavBar />
+      
         <div>
           <Switch>
             <Route exact path="/" component={LayoutScreen} />
-            <Route exact path="/compras" component={ComprasScreen} />
+            <Route exact path="/compras" component={LayoutScreen} />
             <Redirect to="/"/> 
           </Switch>
         </div>
+
+        <PieScreen />
     </Router>
   )
 }

@@ -10,8 +10,8 @@ export const carritoReducer = (state = initialState, action)=>{
     case (types.loadCarrito):
       return{
         ...state,
-        compra:action.payload
-      };
+        carrito: {...action.payload}
+      }
     case (types.addCarrito):
       return{
         ...state,
