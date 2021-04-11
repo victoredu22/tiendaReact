@@ -8,7 +8,9 @@ export const types ={
 
     
     loadCarrito: '[Carrito] load carrito',
-    addCarrito: '[Carrito] add item ',
+    changeStockCarrito: '[Carrito] change stock carrito',
+    addItemCarrito: '[Carrito] add item carrito',
+    loadItemsStorage: '[Carrito] cargar items storage',
 
     
     changeMarca: '[Marca] change stock marca', 

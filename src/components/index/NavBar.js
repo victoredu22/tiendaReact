@@ -1,43 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { loadCarrito } from '../../actions/carrito';
+import React, { useEffect } from 'react'
+import { useDispatch,useSelector } from 'react-redux';
+import { loadStorageCarrito } from '../../actions/carrito';
 
 
 export const NavBar = () => {
   
   const dispatch = useDispatch();
   const {carrito} = useSelector((state)=>state.carrito);
-
-  const x = localStorage.getItem('carrito');
-  const [carroStorage, setCarroStorage] = useState(localStorage.getItem('carrito'))
-
+  
 
   useEffect(() => {
-    setCarroStorage(carrito)
-  }, [carrito])
-
-
-
-
-
-/*   useEffect(() => {
-    
-    if(carrito.length != 0){
-				localStorage.setItem('carrito', JSON.stringify(carrito));
-		}else{
-			console.log('no');
-		}
-    //localStorage.setItem('carrito', JSON.stringify(carrito));
-  
-  }, [])
-   */
-
-  
-
-
-
-
-  
+    const datosLocalStorage  = JSON.parse(localStorage.getItem('carrito'));
+    if(datosLocalStorage){
+      dispatch(loadStorageCarrito(datosLocalStorage));
+    }
+  }, [dispatch]) 
+ 
+   
   return (
     <div className="row g-0 h-100">
     <nav className="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100" style={{zIndex: '100'}}>

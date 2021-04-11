@@ -1,53 +1,25 @@
 import React from 'react'
+import { ItemsEntries } from './ItemsEntries'
 
 export const CompraScreen = () => {
+
+  const itemsLocal = JSON.parse(localStorage.getItem("carrito"));
+  
   return (
-    <section className="container">
+    <section className="d-flex pb-0 h-100 animate__animated animate__fadeIn ">
       <div className="container divCompra">
         <div className="row mp-5">
           <div className="col-lg-8 ">
             <div className="bg-grey p-3 rounded">
-              <div className="row">
-                <div className="col-lg-8 float-left">
-                  
-                  <div className="d-flex mb-2">
-                    <div className="w-25 align-self-center">
-                      <img src="images/image-2.png" style={{width:'80%'}} alt="img-contenido" />
-                    </div>
-                    <div className="ms-3">
-                      <p className="lead">Apple<span className="text-primary">.</span></p> 
-                      <p>iPhone 12 128GB Black</p>
-                      <p><span className="text-primary fw-bold">$ 159.990</span><span> oferta</span></p>
-                      <p><i className="fas fa-shipping-fast" aria-hidden="true"></i> Envio totalmente gratis.</p>
-                      <p><i className="fas fa-star" aria-hidden="true"></i><i className="fas fa-star" aria-hidden="true"></i><i className="fas fa-star" aria-hidden="true"></i><i className="fas fa-star" aria-hidden="true"></i> (2 calificaciones)</p>
-                    </div>
-                  </div>
-
-                </div>
-                <div className="col-lg-4 align-self-center">
-                  <div className="text-center">
-                    <button type="button" className="btn btn-light"><i className="fas fa-minus"></i></button>
-                    hola
-                    <button type="button" className="btn btn-light"><i className="fas fa-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-
-              
-              <hr />
-              <div className="d-flex mb-2">
-                
-                <div className="w-25 align-self-center">
-                  <img src="images/image-2.png" style={{width:'80%'}}  alt="img-contenido" />
-                </div>
-                <div className="ms-3">
-                  <p className="lead">Apple<span className="text-primary">.</span></p> 
-                  <p>iPhone 12 128GB Black</p>
-                  <p><span className="text-primary fw-bold">$ 159.990</span><span> oferta</span></p>
-                  <p><i className="fas fa-shipping-fast" aria-hidden="true"></i> Envio totalmente gratis.</p>
-                  <p><i className="fas fa-star" aria-hidden="true"></i><i className="fas fa-star" aria-hidden="true"></i><i className="fas fa-star" aria-hidden="true"></i><i className="fas fa-star" aria-hidden="true"></i> (2 calificaciones)</p>
-                </div>
-              </div>
+              {
+                itemsLocal.map((items,key)=> (
+                  <ItemsEntries 
+                    key={key}
+                    data={items}
+                    validadorItem= {(key >= 1) ? true : false}
+                  /> 
+                ))
+              }
             </div>
             
 
