@@ -41,11 +41,9 @@ export const CompraScreen = () => {
 						<>
 							<div className="col-lg-8 ">
 								<div className="bg-grey p-3 rounded">
-								
 									{carrito.map((items, key) => (
 										(items.activo)  &&
-										<>
-										
+									
 										<ItemsEntries
 											key={key}
 											data={items}
@@ -53,7 +51,6 @@ export const CompraScreen = () => {
 												key >= 1 && carrito.filter(c=> c.activo === true).length >= 2 ? true : false
 											}
 										/>
-										</>
 									))}
 								</div>
 							</div>
