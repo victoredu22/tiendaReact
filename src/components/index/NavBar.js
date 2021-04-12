@@ -27,15 +27,15 @@ export const NavBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li className="nav-item d-flex">
-            <span  className="searchNav" >
-              <i className="fas fa-search"></i>
-            </span>
-            <input type="text" className="form-control searchProducto" placeholder="Buscar producto"  />
-          </li>
+        <li className="nav-item d-flex">
+<span  className="searchNav" >
+  <i className="fas fa-search"></i>
+</span>
+<input type="text" className="form-control searchProducto" placeholder="Buscar producto"  />
+</li>
           <li className="nav-item align-self-center d-flex">
             <a className="nav-link text-dark"  href={'/compras'} >
-              <i className="fas fa-shopping-bag text-primary"></i> Mi carrito <span className="spanStock" >({carrito.length})</span></a>
+              <i className="fas fa-shopping-cart text-primary" aria-hidden="true"></i> Mi carrito <span className="spanStock" >({carrito.length})</span></a>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="!#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >

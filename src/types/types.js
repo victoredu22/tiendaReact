@@ -11,7 +11,9 @@ export const types ={
     changeStockCarrito: '[Carrito] change stock carrito',
     addItemCarrito: '[Carrito] add item carrito',
     loadItemsStorage: '[Carrito] cargar items storage',
+    deleteItemCarrito: '[Carrito] delete item storage',
 
+    loadSubTotal: '[Carrito] cargar precio SubTotal',
     
     changeMarca: '[Marca] change stock marca', 
 

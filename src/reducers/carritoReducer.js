@@ -2,6 +2,7 @@ import { types } from "../types/types";
 
 const initialState = {
 	carrito: [],
+	costos: "",
 };
 
 export const carritoReducer = (state = initialState, action) => {
@@ -20,16 +21,30 @@ export const carritoReducer = (state = initialState, action) => {
 						: { ...item }
 				),
 			};
-    case types.addItemCarrito:
-      return{
-        ...state,
-        carrito: [...state.carrito, action.payload]
-      }
-		case types.loadItemsStorage:
-			return{
+		case types.addItemCarrito:
+			return {
 				...state,
-				carrito:[...action.payload]
-			}
+				carrito: [...state.carrito, action.payload],
+			};
+		case types.loadItemsStorage:
+			return {
+				...state,
+				carrito: [...action.payload],
+			};
+		case types.deleteItemCarrito:
+			return {
+				...state,
+				carrito: state.carrito.map((item) =>
+					item.id === action.payload.id
+						? {...action.payload, activo:false}
+						: {...item}
+				),
+			}; 
+		case types.loadSubTotal:
+			return {
+				...state,
+				costos: action.payload,
+			};
 		default:
 			return state;
 	}

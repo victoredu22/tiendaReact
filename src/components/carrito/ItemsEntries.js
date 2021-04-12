@@ -1,27 +1,65 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { changeStockCarrito, deleteItemCarrito } from "../../actions/carrito";
+import {
+	precioString,
+	totalProducto,
+	formatDecimal,
+} from "../../helper/precioString";
 import { ContadorProductos } from "../../hook/ContadorProductos";
-import { useForm } from "../../hook/useForm";
 
 export const ItemsEntries = (data) => {
+	const dispatch = useDispatch();
+
 	const { data: itemsCarroCompra } = data;
-	ContadorProductos(itemsCarroCompra,'resta');
-	
+	const itemsFormateados = {
+		...itemsCarroCompra,
+		precio: precioString(itemsCarroCompra.precio),
+		precioTotalProducto: totalProducto(
+			itemsCarroCompra.enCarroCompras,
+			precioString(itemsCarroCompra.precio)
+		),
+	};
 
-	const handleOperacion = (e,operacion)=>{
-		e.preventDefault();
+	const [producto, restaProducto, sumaProducto] = ContadorProductos(
+		itemsFormateados
+	);
 
-		//const [cantidad, resta] = ContadorProductos(itemsCarroCompra,operacion);
-		
+
+
+	useEffect(() => {
+		dispatch(changeStockCarrito(producto));
+		const itemsLocal = JSON.parse(localStorage.getItem("carrito"));
+
+		if (producto.enCarroCompras <= 0) {
 			
+	 	 	const dataLocal = itemsLocal.filter((item) =>
+				item.id !== producto.id
+			);
+			localStorage.setItem("carrito", JSON.stringify(dataLocal)); 
 
+			dispatch(deleteItemCarrito(producto)); 
 
+		}else{
+			const arrayLocal = itemsLocal.map((item) =>
+				item.id === producto.id ? { ...producto } : { ...item }
+			);
+			localStorage.setItem("carrito", JSON.stringify(arrayLocal));
+		}
 
-	}
+		
+
+	}, [dispatch, producto]);
+
 	return (
 		<>
-			{data.validadorItem && <hr></hr>}
-			{
+	
+			
+			{itemsCarroCompra && (
+				<>
+				{data.validadorItem ? <hr></hr> :<></>}
 				<div className="row">
+		
 					<div className="col-lg-8 float-left">
 						<div className="d-flex mb-2">
 							<div className="w-25 align-self-center">
@@ -39,7 +77,8 @@ export const ItemsEntries = (data) => {
 								<p>{itemsCarroCompra.description}</p>
 								<p>
 									<span className="text-primary fw-bold">
-										{itemsCarroCompra.precio}
+										${" "}
+										{formatDecimal(itemsCarroCompra.precio)}
 									</span>
 									{itemsCarroCompra.oferta && (
 										<span> oferta</span>
@@ -61,17 +100,26 @@ export const ItemsEntries = (data) => {
 					</div>
 					<div className="col-lg-4 align-self-center">
 						<div className="text-center">
-							<button type="button" className="btn btn-light" onClick={(e)=> handleOperacion(e,'resta')}>
+							<button
+								type="button"
+								className="btn btn-light"
+								onClick={restaProducto}
+							>
 								<i className="fas fa-minus"></i>
 							</button>
-							{itemsCarroCompra.enCarroCompras}
-							<button type="button" className="btn btn-light" onClick={(e)=> handleOperacion(e,'suma')}>
+							{producto.enCarroCompras}
+							<button
+								type="button"
+								className="btn btn-light"
+								onClick={sumaProducto}
+							>
 								<i className="fas fa-plus"></i>
 							</button>
 						</div>
 					</div>
 				</div>
-			}
+				</>
+			)}
 		</>
 	);
 };

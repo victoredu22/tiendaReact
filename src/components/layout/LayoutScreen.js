@@ -26,10 +26,6 @@ export const LayoutScreen = () => {
 
   localStorage.setItem('saludo','hola')
 
-
-  /* const x = moment().format("DD-MM-YYYY");   
-  var m = moment(x).toISOString();  */
-
   const contenido = [
     {
       id:0,
@@ -43,7 +39,7 @@ export const LayoutScreen = () => {
       categoria:0,
       titulo:'Apple',
       descripcion:'iPhone 12 128GB Black',
-      precio:'$ 159.990',
+      precio:'159990',
       oferta: true,
       envio:true,
       levelStars: 5,
@@ -62,7 +58,7 @@ export const LayoutScreen = () => {
       categoria:1,
       titulo:'Apple',
       descripcion:'iPhone 12 128GB Black',
-      precio:'$ 159.990',
+      precio:'159990',
       oferta: true,
       envio:false,
       levelStars: 5,
@@ -81,7 +77,7 @@ export const LayoutScreen = () => {
       categoria:2,
       titulo:'Apple',
       descripcion:'iPhone 12 128GB Blackxxxx',
-      precio:'$ 159.990',
+      precio:'159990',
       oferta: true,
       envio:false,
       levelStars: 5,
@@ -99,7 +95,7 @@ export const LayoutScreen = () => {
       },
       titulo:'Apple',
       descripcion:'iPhone 12 128GB Black',
-      precio:'$ 159.990',
+      precio:'159990',
       oferta: true,
       envio:true,
       levelStars: 5,

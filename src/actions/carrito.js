@@ -19,3 +19,12 @@ export const loadStorageCarrito = (payload)=>({
   type:types.loadItemsStorage,
   payload
 })
+
+export const loadSubTotal = (payload)=>({
+  type:types.loadSubTotal,
+  payload
+})
+export const deleteItemCarrito = (payload)=>({
+  type:types.deleteItemCarrito,
+  payload
+})

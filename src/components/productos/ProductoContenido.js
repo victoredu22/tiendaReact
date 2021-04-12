@@ -12,8 +12,6 @@ export const ProductoContenido = (contenido) => {
 
 	const { carrito } = useSelector((state) => state.carrito);
 
-	console.log(carrito.length > 0);
-
 	useEffect(() => {
 		if (carrito.length > 0) {
 			localStorage.setItem("carrito", JSON.stringify(carrito));

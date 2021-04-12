@@ -2,13 +2,13 @@ import React from 'react'
 
 export const PieScreen = () => {
   return (
-    <section className="d-flex pt-5 pb-0 h-100">
+    <section className="d-flex pt-5 pb-0 h-100" style={{marginTop:'10%'}}>
     <div className="container align-self-center">
-      <div className="bg-primary text-center text-light p-5 rounded w-75 mx-auto mb-5">
+{/*       <div className="bg-primary text-center text-light p-5 rounded w-75 mx-auto mb-5">
         <h2 className="display-4 fw-bold">Crea tu cuenta hoy</h2>
         <p className="lead">Tu envio es mas seguro y rapido con nosotros</p>
-      </div>
-      <div className="row mb-3 text-center">
+      </div> */}
+      <div className="row mb-3 text-center mt-5">
         <div className="col-lg-3 col-sm-6 my-4">
           <h5 className="fw-bold mb-3">Productos</h5>
           <ul className="list-unstyled">
