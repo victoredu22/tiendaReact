@@ -1,31 +1,30 @@
-import React from 'react'
+import React from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Redirect,
 } from "react-router-dom";
-import { NavBar } from '../components/index/NavBar';
-import { PieScreen } from '../components/index/PieScreen';
-import 'animate.css'
+import { NavBar } from "../components/index/NavBar";
+import { PieScreen } from "../components/index/PieScreen";
+import "animate.css";
 
-import { LayoutScreen } from '../components/layout/LayoutScreen';
+import { LayoutScreen } from "../components/layout/LayoutScreen";
 
 export const AppRouter = () => {
+	return (
+		<Router basename={process.env.PUBLIC_URL}>
+			<NavBar />
 
-  return (
-    <Router>
-       <NavBar />
-      
-        <div>
-          <Switch>
-            <Route exact path="/" component={LayoutScreen} />
-            <Route exact path="/compras" component={LayoutScreen} />
-            <Redirect to="/"/> 
-          </Switch>
-        </div>
+			<div>
+				<Switch>
+					<Route exact path="/" component={LayoutScreen} />
+					<Route exact path="https://victoredu22.github.io/tiendaReact/compras" component={LayoutScreen} />
+					<Redirect to="/" />
+				</Switch>
+			</div>
 
-        <PieScreen />
-    </Router>
-  )
-}
+			<PieScreen />
+		</Router>
+	);
+};
