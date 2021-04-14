@@ -5,8 +5,6 @@ import { AddProductoBtn } from "./AddProductoBtn";
 export const ProductoContenido = (contenido) => {
 	const { data } = contenido;
 
-	console.log(data.filter(d=>d.activo).length);
-
 	return (
 		<>
 			{
