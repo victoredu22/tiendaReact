@@ -3,6 +3,8 @@ import { ProductoInfo } from '../productos/ProductoInfo'
 import { ProductoSlidebar } from '../productos/ProductoSlidebar'
 
 export const DestacadoScreen = () => {
+
+  
   return (
   
     <section className="d-flex animate__animated animate__fadeIn">

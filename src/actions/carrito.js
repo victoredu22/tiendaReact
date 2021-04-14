@@ -28,3 +28,8 @@ export const deleteItemCarrito = (payload)=>({
   type:types.deleteItemCarrito,
   payload
 })
+
+export const busquedaProducto = (payload)=>({
+  type:types.searchProducto,
+  payload
+})

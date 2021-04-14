@@ -1,40 +1,8 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-	changeStockCarrito,
-	addProducto,
-	addItemCarrito,
-} from "../../actions/carrito";
+import React from "react";
+import { AddProductoBtn } from "./AddProductoBtn";
 
 export const ProductoContenido = (contenido) => {
 	const { data } = contenido;
-	const dispatch = useDispatch();
-
-	const { carrito } = useSelector((state) => state.carrito);
-
-	useEffect(() => {
-		if (carrito.length > 0) {
-			localStorage.setItem("carrito", JSON.stringify(carrito));
-		}
-	}, [carrito]);
-
-	const ingresoItem = (e, producto) => {
-		e.preventDefault();
-
-		if (carrito.length === 0) {
-			dispatch(addProducto(producto));
-		} else {
-			const x = carrito.find((item) => item.id === producto.id);
-
-			x !== undefined
-				? dispatch(
-						changeStockCarrito([
-							{ ...x, enCarroCompras: x.enCarroCompras++ },
-						])
-				  )
-				: dispatch(addItemCarrito({ ...producto, enCarroCompras: 1 }));
-		}
-	};
 
 	return (
 		<>
@@ -64,17 +32,7 @@ export const ProductoContenido = (contenido) => {
 									</p>
 								)}
 								<div className="align-self-center">
-									<button
-										type="button"
-										className="btn btn-outline-secondary"
-										onClick={(e) => ingresoItem(e, m)}
-									>
-										<i
-											className="fas fa-shopping-bag text-primary"
-											aria-hidden="true"
-										></i>{" "}
-										Agregar al carro
-									</button>
+									<AddProductoBtn {...m} />
 								</div>
 							</div>
 						</div>

@@ -33,26 +33,39 @@ export const producReducer = (state = initialState, action) => {
 		case types.changeActivoStock:
 			return {
 				...state,
-				producto:state.producto.map((p) =>
-					p.stock > 0 ? { ...p, activo: true } : { ...p, activo: false }
-				)
-			}
+				producto: state.producto.map((p) =>
+					p.stock > 0
+						? { ...p, activo: true }
+						: { ...p, activo: false }
+				),
+			};
 		case types.changeActivoSinStock:
-			return{
+			return {
 				...state,
-				producto:state.producto.map((p) =>
-					p.stock === 0 ? { ...p, activo: true } : { ...p, activo: false }
-				)
-			}
+				producto: state.producto.map((p) =>
+					p.stock === 0
+						? { ...p, activo: true }
+						: { ...p, activo: false }
+				),
+			};
 		case types.changeFechaProxima:
-			return{
+			return {
 				...state,
-				producto:state.producto.map((p) =>
+				producto: state.producto.map((p) =>
 					p.fechaPublicacion > action.payload
-					?	{...p, activo:true}
-					: {...p, activo:false}
-				)
-			}
+						? { ...p, activo: true }
+						: { ...p, activo: false }
+				),
+			};
+		case types.searchProducto:
+			return {
+				...state,
+				producto: state.producto.map((p) =>
+					p.titulo.toLocaleLowerCase().includes(action.payload)
+						? { ...p, activo: true }
+						: { ...p, activo: false }
+				),
+			};
 		default:
 			return state;
 	}

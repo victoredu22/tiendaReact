@@ -2,7 +2,7 @@ import React from 'react'
 
 export const PieScreen = () => {
   return (
-    <section className="d-flex pt-5 pb-0 h-100" style={{marginTop:'10%'}}>
+    <section className="d-flex pt-5 pb-0 h-100" >
     <div className="container align-self-center">
 {/*       <div className="bg-primary text-center text-light p-5 rounded w-75 mx-auto mb-5">
         <h2 className="display-4 fw-bold">Crea tu cuenta hoy</h2>

@@ -18,7 +18,7 @@ export const CompraScreen = () => {
 	}, [dispatch, carrito]);
 
 	return (
-		<section className="d-flex pb-0 h-100 animate__animated animate__fadeIn " >
+		<section className="d-flex pb-0 h-100 animate__animated animate__fadeIn" >
 			<div className="container divCompra mb-5" >
 				<div className="row mp-5">
 					{carrito.filter(c=> c.activo === false).length  === carrito.length  ? (

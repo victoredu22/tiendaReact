@@ -11,12 +11,29 @@ export const ExtraContent = () => {
         </div>
         <div className="col-lg-6">
           <div className="content mx-auto px-4 my-5">
-            <img src="images/smartwatch-02.jpg" className="img-fluid" alt="categoria-celulares"/>
+          <figure className="snip1467">
+            <img src="images/smartwatch-02.jpg"  />
+            <figcaption>
+              <h3>Apple Watch Series</h3>
+              <p>El Apple Watch Series 6 viene a revolucionarlo todo.  Se más sano, más activo y mejor conectado. </p>
+            </figcaption>
+            <a href="#/"></a>
+          </figure>
+
           </div>
         </div>
         <div className="col-lg-6">
           <div className="content mx-auto px-4 my-5">
-            <img src="images/smartwatch-03.jpg" className="img-fluid" alt="categoria-celulares"/>
+          <figure className="snip1467">
+            <img src="images/smartwatch-03.jpg"  />
+            <figcaption>
+              <h3>Smartwatch Samsung Galaxy</h3>
+              <p>El diseño del Galaxy Watch Active es sobrio y liviano para que te muevas de forma cómoda y rápida.</p>
+            </figcaption>
+            <a href="#/" ></a>
+          </figure>
+
+            
           </div>
         </div>
       </div>

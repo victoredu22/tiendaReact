@@ -5,9 +5,12 @@ import { productoActivos } from "../../actions/producto";
 import { StockEntries } from "../disponibilidad/StockEntries";
 import { MarcasEntries } from "../marcas/MarcasEntries";
 import { ProductoContenido } from "../productos/ProductoContenido";
+import { ProductoSearch } from "../productos/ProductoSearch";
 
 
-export const ContenidoScreen = () => {
+export const ContenidoScreen = (history) => {
+
+
 	const { producto } = useSelector((state) => state.producto);
 	const { marca } = useSelector(state => state.marca);
 
@@ -53,6 +56,16 @@ export const ContenidoScreen = () => {
 					<div className="col-lg-10">
 						<div className="container align-self-center">
 							<div className="row justify-content-md-center">
+							
+								{
+									(producto) ? 
+									<ProductoSearch 
+										{
+											...history
+										}
+									/>
+									: <></>
+								}
 								{producto ? (
 									<ProductoContenido data={producto} />
 								) : (

@@ -73,6 +73,10 @@ section{
   }
   .divDestacado{
     margin-top: 30% !important;
+    margin-bottom: 43% !important;
+  }
+  .toast-top-full-width{
+    top: 10% !important;
   }
 }
 
@@ -104,6 +108,7 @@ section{
 }
 .divCompra{
   margin-top: 5%;
+  margin-bottom: 9% !important;
 }
 .searchNav{
   position: absolute;
@@ -125,4 +130,8 @@ section{
 .seleccionDiv{
   cursor: pointer
 }
+.toast-top-full-width{
+  top: 9% !important;
+}
+
 
