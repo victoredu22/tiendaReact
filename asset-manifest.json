@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/tiendaReact%E2%80%8B/static/js/main.8ab11f40.chunk.js",
-    "main.js.map": "/tiendaReact%E2%80%8B/static/js/main.8ab11f40.chunk.js.map",
+    "main.js": "/tiendaReact%E2%80%8B/static/js/main.8c79af4b.chunk.js",
+    "main.js.map": "/tiendaReact%E2%80%8B/static/js/main.8c79af4b.chunk.js.map",
     "runtime-main.js": "/tiendaReact%E2%80%8B/static/js/runtime-main.81a29040.js",
     "runtime-main.js.map": "/tiendaReact%E2%80%8B/static/js/runtime-main.81a29040.js.map",
     "static/css/2.a1596f27.chunk.css": "/tiendaReact%E2%80%8B/static/css/2.a1596f27.chunk.css",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.81a29040.js",
     "static/css/2.a1596f27.chunk.css",
     "static/js/2.8f8f9631.chunk.js",
-    "static/js/main.8ab11f40.chunk.js"
+    "static/js/main.8c79af4b.chunk.js"
   ]
 }
