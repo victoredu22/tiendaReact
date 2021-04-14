@@ -21,7 +21,7 @@ export const NavBar = () => {
     <div className="row g-0 h-100">
     <nav className="navbar navbar-expand-lg navbar-light bg-light position-fixed w-100" style={{zIndex: '100'}}>
       <div className="container">
-        <a className="navbar-brand fw-bold" href={'/'} >Banca Digital<span className="text-primary">.</span></a>
+        <a className="navbar-brand fw-bold" href={'/'} >Carrito Compra<span className="text-primary">.</span></a>
         <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i className="fas fa-bars lead text-dark"></i>
         </button>
@@ -36,10 +36,11 @@ export const NavBar = () => {
               <i className="fas fa-user text-primary"></i> Inicia Sesion
             </a>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a className="dropdown-item" href="#/">Action</a></li>
+              <li><a className="dropdown-item" href="#/">Proximamente</a></li>
+             {/*  <li><a className="dropdown-item" href="#/">Action</a></li>
               <li><a className="dropdown-item" href="#/">Another action</a></li>
               <li><hr className="dropdown-divider" /></li>
-              <li><a className="dropdown-item" href="#/">Something else here</a></li>
+              <li><a className="dropdown-item" href="#/">Something else here</a></li> */}
             </ul>
           </li>
         </ul>

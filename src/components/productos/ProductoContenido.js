@@ -1,12 +1,29 @@
 import React from "react";
+import { formatDecimal } from "../../helper/precioString";
 import { AddProductoBtn } from "./AddProductoBtn";
 
 export const ProductoContenido = (contenido) => {
 	const { data } = contenido;
 
+	console.log(data.filter(d=>d.activo).length);
+
 	return (
 		<>
-			{data.map(
+			{
+			(data.filter(d=>d.activo).length === 0) 
+			?
+			<div className="container align-self-center">
+			<div className="bg-grey text-center p-4 rounded w-75 mx-auto mb-2">
+				<h4 className="">
+					{" "}
+					<i className="fas fa-search"></i> No
+					se han encontrado coincidencias
+					<span className="text-primary">.</span>
+				</h4>
+			</div>
+		</div>
+			:
+				data.map(
 				(m) =>
 					m.activo && (
 						<div className="col col-lg-3 mb-3" key={m.id}>
@@ -21,7 +38,7 @@ export const ProductoContenido = (contenido) => {
 								<p>{m.descripcion}</p>
 								<p>
 									<span className="text-primary fw-bold">
-										{m.precio}
+										${formatDecimal(m.precio)}
 									</span>
 									<span> oferta</span>
 								</p>

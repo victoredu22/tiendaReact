@@ -48,7 +48,7 @@ export const ProductoSearch = (history) => {
 					<span className="fw-bold">
 						{producto && producto.filter((p) => p.activo).length}
 					</span>{" "}
-					Items seleccionados
+					Items encontrados
 				</div>
 			</div>
 			<hr></hr>

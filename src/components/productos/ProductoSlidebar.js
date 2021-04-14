@@ -32,7 +32,7 @@ export const ProductoSlidebar = () => {
 			id: 0,
 			className: "carousel-item active",
 			img: {
-				src: "images/blog-01.jpg",
+				src: "images/samsungPortada.jpg",
 				className: "d-block w-100",
 				alt: "imgCarrusel1",
 			},
@@ -41,7 +41,7 @@ export const ProductoSlidebar = () => {
 			id: 1,
 			className: "carousel-item",
 			img: {
-				src: "images/blog-02.jpg",
+				src: "images/iphonePortada.jpg",
 				className: "d-block w-100",
 				alt: "imgCarrusel2",
 			},
@@ -50,7 +50,7 @@ export const ProductoSlidebar = () => {
 			id: 2,
 			className: "carousel-item",
 			img: {
-				src: "images/blog-03.jpg",
+				src: "images/huaweiPortada.jpg",
 				className: "d-block w-100",
 				alt: "imgCarrusel3",
 			},

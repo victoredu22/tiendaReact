@@ -45,10 +45,7 @@ export const AddProductoBtn = (producto) => {
 				className="btn btn-outline-secondary"
 			 	onClick={ingresoItem} 
 			>
-				<i
-					className="fas fa-shopping-bag text-primary"
-					aria-hidden="true"
-				></i>{" "}
+				<i className="fas fa-shopping-cart text-primary" aria-hidden="true"></i>{" "}
 				Agregar al carro
 			</button>
 		</>

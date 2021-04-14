@@ -12,12 +12,11 @@ export const ExtraContent = () => {
         <div className="col-lg-6">
           <div className="content mx-auto px-4 my-5">
           <figure className="snip1467">
-            <img src="images/smartwatch-02.jpg"  />
+            <img src="images/smartwatch-02.jpg" alt="smart"/>
             <figcaption>
               <h3>Apple Watch Series</h3>
               <p>El Apple Watch Series 6 viene a revolucionarlo todo.  Se más sano, más activo y mejor conectado. </p>
             </figcaption>
-            <a href="#/"></a>
           </figure>
 
           </div>
@@ -25,12 +24,11 @@ export const ExtraContent = () => {
         <div className="col-lg-6">
           <div className="content mx-auto px-4 my-5">
           <figure className="snip1467">
-            <img src="images/smartwatch-03.jpg"  />
+            <img src="images/smartwatch-03.jpg"  alt="smart"/>
             <figcaption>
               <h3>Smartwatch Samsung Galaxy</h3>
               <p>El diseño del Galaxy Watch Active es sobrio y liviano para que te muevas de forma cómoda y rápida.</p>
             </figcaption>
-            <a href="#/" ></a>
           </figure>
 
             
