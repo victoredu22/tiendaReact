@@ -34,9 +34,9 @@ export const PieScreen = () => {
           </ul>
         </div>
         <div className="col-lg-3 col-sm-6 my-4">
-          <h5 className="fw-bold mb-3">Banca digital</h5>
+          <h5 className="fw-bold mb-3">Carrito Compras</h5>
           <ul className="list-unstyled">
-            <li className="mb-3">Avenida Paseo de la reforma 296</li>
+            <li className="mb-3">Avenida Paseo de torres 543</li>
             <li >
               <ul className="list-inline">
                 <li className="list-inline-item me-3"><a href="#/" className="lead text-dark"><i className="fab fa-facebook"></i></a></li>
@@ -51,7 +51,7 @@ export const PieScreen = () => {
       <div className="border-top py-4">
         <div className="row">
           <div className="col-lg-6 col-md-12">
-            <small>2021. Banco digital. Todos los derechos reservados</small>
+            <small>2021. Carrito Compras. Todos los derechos reservados</small>
           </div>
           <div className="col-lg-6 col-md-12">
             <ul className="list-inline text-lg-end">

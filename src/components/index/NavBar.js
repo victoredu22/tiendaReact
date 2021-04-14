@@ -31,7 +31,7 @@ export const NavBar = () => {
             <a className="nav-link text-dark"  href={'/compras'} >
               <i className="fas fa-shopping-cart text-primary" aria-hidden="true"></i> Mi carrito <span className="spanStock" >({carrito.length})</span></a>
           </li>
-          <li className="nav-item dropdown">
+          <li className="nav-item dropdown align-self-center d-flex">
             <a className="nav-link dropdown-toggle" href="!#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
               <i className="fas fa-user text-primary"></i> Inicia Sesion
             </a>
