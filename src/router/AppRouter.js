@@ -14,7 +14,7 @@ import { LayoutScreen } from '../components/layout/LayoutScreen';
 export const AppRouter = () => {
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
        <NavBar />
       
         <div>
