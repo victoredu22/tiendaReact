@@ -13,13 +13,13 @@ import { LayoutScreen } from "../components/layout/LayoutScreen";
 
 export const AppRouter = () => {
 	return (
-		<Router basename={process.env.PUBLIC_URL}>
+		<Router history={history}>
 			<NavBar />
 
 			<div>
 				<Switch>
 					<Route exact path="/" component={LayoutScreen} />
-					<Route exact path="https://victoredu22.github.io/tiendaReact/compras" component={LayoutScreen} />
+					<Route exact path="/compras" component={LayoutScreen} />
 					<Redirect to="/" />
 				</Switch>
 			</div>
