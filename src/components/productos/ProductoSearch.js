@@ -5,7 +5,11 @@ import { useForm } from "../../hook/useForm";
 import { useDispatch, useSelector } from "react-redux";
 import { busquedaProducto } from "../../actions/carrito";
 
-export const ProductoSearch = (history) => {
+
+
+
+
+export const ProductoSearch = (his) => {
 	const { producto } = useSelector((state) => state.producto);
 
 	const location = useLocation();
@@ -19,12 +23,13 @@ export const ProductoSearch = (history) => {
 
 	const { searchText } = formValues;
 
-	useEffect(() => {
-		history.push(`?q=${searchText}`);
+
+ 	useEffect(() => {
+		his.push(`?q=${searchText}`);
 
 		dispatch(busquedaProducto(searchText.toLocaleLowerCase()));
 		//eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [searchText, dispatch]);
+	}, [searchText, dispatch]); 
 
 	return (
 		<div className="mb-5">
