@@ -1,5 +1,5 @@
 # Pagina donde se visualiza la pag
-https://carrito-react.herokuapp.com/?q=
+https://tienda-react-et6t4.ondigitalocean.app/
 
 
 
